@@ -6,5 +6,5 @@ Route::get('/', function () {
 
 });
 
-require __DIR__ . '/backend/backend.php';
+require __DIR__ . '\backend\backend.php';
 
