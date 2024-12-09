@@ -2,9 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
+use Illuminate\Support\Facades\Auth;
 
+
+Auth::routes();
+
+Route::get('/', function () {
+    return view('welcome');
 });
 
-require __DIR__ . '/backend/backend.php';
 
+
+
+
+Auth::routes(['verify' => true]);
+require __DIR__ . '/backend/backend.php';

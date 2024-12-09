@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Carbon;
 
 class UserTableSeeder extends Seeder
 {
@@ -20,7 +21,8 @@ class UserTableSeeder extends Seeder
                 'name' => 'admin',
                 'email' => 'admin@gmail.com',
                 'password' => Hash::make('admin002'),
-                'gender' => 'male'
+                'gender' => 'male',
+                'email_verified_at' => Carbon::now()
             ],
             [
                 'account_type_id' => 2,
